@@ -28,9 +28,9 @@
       "package": "com.travilify",
       "config" : {
         "googleMaps": {
-          "apiKey": "AIzaSyC4S8QF5lMOKMhg2n2IoC36mbHjAfBXgpw"
+          "apiKey": "process.env.local.GOOGLE_MAPS_API_KEY"
         },
-        "permission": ["ACCESS_FINE_LOCATION","ACCESS_COARSE_LOCATION", "FOREGROUND_SERVICE"]
+        "permissions": ["ACCESS_FINE_LOCATION","ACCESS_COARSE_LOCATION", "FOREGROUND_SERVICE"]
       }
     },
     "web": {

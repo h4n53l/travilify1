@@ -1,16 +1,18 @@
 import React from 'react'
-import { StyleSheet, Text, View, Dimensions } from 'react-native'
-import { HomeScreen } from './src/screens/HomeScreen';
-import RequestScreen from './src/screens/RequestScreen';
+import { StyleSheet, View, Dimensions } from 'react-native'
+import { DestinationContextProvider, OriginContextProvider } from './src/contexts/contexts';
+import RootNavigator from './src/navigations/RootNavigator';
 
 const SCREEN_WIDTH = Dimensions.get('window').width
 
 export default function App() {
   return (
     <View style={styles.container}>
-
-      <RequestScreen />
-      
+<DestinationContextProvider>
+    <OriginContextProvider>
+        <RootNavigator />
+    </OriginContextProvider>
+   </DestinationContextProvider>
     </View>
   );
 }
