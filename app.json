@@ -1,3 +1,4 @@
+
 {
   "expo": {
     "name": "travilify",
@@ -23,6 +24,13 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.travilify",
+      "config" : {
+        "googleMaps": {
+          "apiKey": "AIzaSyC4S8QF5lMOKMhg2n2IoC36mbHjAfBXgpw"
+        },
+        "permission": ["ACCESS_FINE_LOCATION","ACCESS_COARSE_LOCATION", "FOREGROUND_SERVICE"]
       }
     },
     "web": {

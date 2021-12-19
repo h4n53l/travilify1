@@ -58,7 +58,7 @@ export const paymentOptions = [{image:require('../../assets/visaIcon.png'),text:
 export const availableServices = ["Travilify Go","Travilify","Travilify connect","Travilify Black","Travilify Van","Travilify Assist"]
 
 export const carsAround = [{latitude:-26.207487,longitude:28.236226},
-    {latitude:-26.202616,longitude:28.227718},
+    {latitude:50.7371737,longitude:-1.8588705},
     {latitude:-26.202424,longitude:28.236612},
     {latitude:-26.208565,longitude:28.237191},
     {latitude:-26.203598,longitude:28.239509},

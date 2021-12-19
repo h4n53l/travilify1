@@ -13,7 +13,7 @@ const SCREEN_WIDTH = Dimensions.get('window').width
 
 export const HomeScreen = ({navigation}) => {
 
-    const [latlng,setLatLng] = useState({})
+    const [coordinates,setCoordinates] = useState({})
 
 const checkPermission =async()=>{
     const hasPermission = await Location.requestForegroundPermissionsAsync();
@@ -36,7 +36,8 @@ const getLocation = async()=>{
         const {
             coords:{latitude,longitude},
         } = await Location.getCurrentPositionAsync();
-        setLatLng({latitude:latitude,longitude:longitude})
+        setCoordinates({latitude:latitude,longitude:longitude})
+        
     }catch(err){
 
     }
@@ -47,7 +48,6 @@ const _map = useRef(1);
 useEffect(()=>{
     checkPermission();
     getLocation()
-   // console.log(latlng)
 ,[]})
 
     return (
@@ -63,10 +63,10 @@ useEffect(()=>{
         </View>
         <ScrollView bounces ={false}>
             <View style ={styles.home}>
-                <Text style = {styles.text1}>Destress your commute</Text>
+                <Text style = {styles.text1}>Comute easily with Travilify</Text>
                 <View style ={styles.view1}>
                     <View  style ={styles.view8}>
-                        <Text style ={styles.text2}>Read a book.Take a nap. Stare out the window</Text>
+                        <Text style ={styles.text2}>Safest Taxi Service App acording to statistics.</Text>
                         <TouchableOpacity onPress ={()=>{navigation.navigate("RequestScreen",{state:0})}}>
                             <View style ={styles.button1}>
                                 <Text style = {styles.button1Text}>Ride with Travilify</Text>
@@ -127,8 +127,8 @@ useEffect(()=>{
                             />
                         </View>
                         <View>
-                            <Text style ={{fontSize:18,color:colors.black}}>32 Olivia Rd</Text>
-                            <Text style ={{color:colors.grey3}}>Klipfontein 83-Ir, Boksburg</Text>
+                            <Text style ={{fontSize:18,color:colors.black}}>Address line 1</Text>
+                            <Text style ={{color:colors.grey3}}>Address line 2</Text>
                         </View>
                     </View>
                     <View>
@@ -150,8 +150,8 @@ useEffect(()=>{
                             />
                         </View>
                         <View>
-                            <Text style ={{fontSize:18,color:colors.black}}>32 Olivia Rd</Text>
-                            <Text style ={{color:colors.grey3}}>Klipfontein 83-Ir, Boksburg</Text>
+                            <Text style ={{fontSize:18,color:colors.black}}>Address line 1</Text>
+                            <Text style ={{color:colors.grey3}}>Address line 2</Text>
                         </View>
                     </View>
                     <View>
