@@ -12,7 +12,7 @@ import { mapStyle} from "../global/mapStyle"
 const SCREEN_WIDTH = Dimensions.get('window').width
 
 
-export const HomeScreen = ({navigation}) => {
+export default function HomeScreen({navigation}) {
 
     const [coordinates,setCoordinates] = useState({})
 
