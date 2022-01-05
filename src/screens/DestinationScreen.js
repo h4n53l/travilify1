@@ -3,7 +3,7 @@ import { StyleSheet, Text, View,Dimensions,TouchableOpacity,} from 'react-native
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { Avatar,Icon} from 'react-native-elements';
 import { colors,parameters } from '../global/styles'
-import {GOOGLE_MAPS_APIKEY} from "@env";
+import {GOOGLE_MAPS_API_KEY} from "@env";
 import { OriginContext,DestinationContext } from '../contexts/contexts';
 
 const SCREEN_HEIGHT = Dimensions.get('window').height;
@@ -61,11 +61,12 @@ const DestinationScreen = ({navigation}) => {
                 ref ={textInput1}
                 minLength ={2}
                 enablePoweredByContainer = {false}
+                currentLocationLabel='Current location'
                 fetchDetails ={true}
                 autoFocus ={true}
                 styles = {autoComplete}
                 query ={{
-                    key:GOOGLE_MAPS_APIKEY,
+                    key:GOOGLE_MAPS_API_KEY,
                     language:"en"
                 }}
 
